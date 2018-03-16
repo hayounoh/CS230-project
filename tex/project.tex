@@ -58,25 +58,21 @@ $N$-dimensional discrete-time signal \cite{B:78,O:17} $f = (f[0], f[1], \ldots, 
 \BEQ \label{e-DFT}
 F\{f\}[m] = \sum_{n=0}^{N-1} f[n] e^{2 \pi i m n / N}, \quad m = 0, \ldots, N-1.
 \EEQ
-Figure \ref{f-example_bandlimited} illustrates a simple example of a discrete-time 
-signal $f$ and its DFT $F\{f\}.$
+Figure \ref{f-example_DFT} illustrates a simple example of a discrete-time 
+signal $f[n]$ and the real part of its DFT, Re$\{F\{f\}[m]\}$.
 
-It should be noted that the DFT in equation~(\ref{e-DFT}) can be written as a dense matrix multiplication, \ie,
+The DFT in equation~(\ref{e-DFT}) can be written as a dense (complex-valued) matrix multiplication, \ie,
 $F\{f\} = D f,$ where $D \in \complexs^{N \times N}$ is a complex matrix with values $e^{2 \pi i m n / N}$ in 
 the $(m,n)$-index. As the DFT can be computed via a dense matrix multiplication, one can compute the DFT naively
 in $O(N^2)$ time. In addition, there exists a method to compute the DFT in $O(N \log N)$ time, the FFT. The method 
 by which the FFT computes the DFT is beyond the scope of this project, and we refer the interested reader to 
 \cite{CT:65}.
 
-% for i in range(5):
-% 	f += np.cos(2*np.pi*i*tt + i)
-
-
 \begin{figure}
-\begin{center}
-\includegraphics[width=.9\textwidth]{figures/XXX}
-\end{center}
-\caption{Bandlimited signal $f(t) = \sum_{i=1}^5 \cos(2 \pi i t + i)$ and the real part of its DFT.}
+\centering
+\includegraphics[scale=.6]{figures/DFT_example.png}
+\caption{Discrete-time signal $f[n] = \sum_{i=1}^5 \cos(2 \pi i n + i)$ and 
+the real part of its DFT, Re$\{F\{f\}[m]\}$.}
 \label{f-example_DFT}
 \end{figure}
 
