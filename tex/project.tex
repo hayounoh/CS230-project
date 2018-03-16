@@ -68,13 +68,17 @@ in $O(N^2)$ time. In addition, there exists a method to compute the DFT in $O(N 
 by which the FFT computes the DFT is beyond the scope of this project, and we refer the interested reader to 
 \cite{CT:65}.
 
-% \begin{figure}
-% \begin{center}
-% \includegraphics[width=.9\textwidth]{figures/XXX}
-% \end{center}
-% \caption{Bandlimited signal $f(t) = \cos(800 \pi t) + 2\sin(2200 \pi t)$ and its DFT.}
-% \label{f-example_DFT}
-% \end{figure}
+% for i in range(5):
+% 	f += np.cos(2*np.pi*i*tt + i)
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.9\textwidth]{figures/XXX}
+\end{center}
+\caption{Bandlimited signal $f(t) = \sum_{i=1}^5 \cos(2 \pi i t + i)$ and the real part of its DFT.}
+\label{f-example_DFT}
+\end{figure}
 
 \section{Approach} \label{s-approach}
 The problem of determining the DFT of a bandlimited signal is a supervised learning problem, and so
@@ -138,7 +142,7 @@ dedicated to the test set. We found that we did not need to allocate any data to
 
 \section{Results} For the hyperparameters specified in \S\ref{s-approach}, our neural network architecture achieves 
 an MSE of $2.46 \times 10^{-3}$ on the training data and an MSE of $6.60 \times 10^{-2}$ on the test data after 2500 
-epochs. Figure~\ref{f-example_cost_vs_epoch} is a plot of the cost versus epoch on the training data for this particular 
+epochs. Figure~\ref{f-example_cost_vs_epoch} is a plot of the cost $\mathcal J$ versus epoch on the training data for this particular 
 problem instance and initialization.
 
 \begin{figure}
