@@ -21,13 +21,15 @@ Estimating the Discrete Fourier Transform using Deep Learning
 
 \begin{abstract}
 Throughout a wide variety of fields, the Fourier Transform -- and namely the Discrete Fourier Transform (DFT) -- 
-is heavily used. In this paper, we show that a simple four-layer neural network with linear activation functions 
-can estimate the DFT to high accuracy. We test our neural network on a variety of signals.
+is heavily used as a method of analysis of frequency components. In this paper, we show that a simple four-layer 
+neural network with linear activation functions can estimate the DFT to high accuracy. We test our neural network 
+architecture on a variety of signals, and gauge both its accuracy and its speed against the ground truth and its 
+fast, state-of-the-art implementation.
 \end{abstract}
 
 \newpage
-\tableofcontents
-\newpage
+% \tableofcontents
+% \newpage
 
 \section{Introduction}
 Throughout a wide variety of fields -- from signal processing \cite{OS:99}, to medical imaging \cite{S:00}, 
@@ -46,8 +48,8 @@ in $O(N \log N)$ time \cite{B:78,O:17}.
 The goal of this project is to estimate the DFT of a bandlimited signal given only 
 its time domain representation. This neural network should be able to estimate the Discrete Fourier 
 Transform of bandlimited signal without having to explicitly compute the Discrete Fourier Transform. 
-Ultimately, the results of this project may lead to a multi-purpose filter that may be able to compute 
-the DFT of a signal faster than the current state-of-the-art algorithm, the FFT \cite{CT:65}.
+Ultimately, the results of this project may, in the future, lead to a deep learning architecture able to 
+compute the DFT of a signal faster than the current state-of-the-art algorithm, the FFT \cite{CT:65}.
 
 \section{The Discrete Fourier Transform}
 The context and background for this project is abundant, as signal processing has enjoyed a vast treatment
@@ -106,11 +108,11 @@ and test data without any form of regularization.
 
 \section{Data}
 
-In order to keep the scope of this project aimed at bandlimited signals, we shall \emph{a priori}
-determine a maximum bandwidth such that no signal shall have more than 5\% of their spectrum outside
-that bandwidth (this allows us to consider noisy signals, as noise typically is considered to have 
-infinite bandwidth.) Additionally, we pick this maximum bandwidth such that aliasing does not 
-occur \cite{OS:99}.
+In order to keep the scope of this project manageable, we shall consider only one-dimensional signals (\eg, 
+$f[n] = \cos(n)$), although Fourier transforms and DFTs can be extended to two-dimensional signals 
+(\eg, $g[n,k] = \cos(n)\cos(k)$), three-dimensional signals (\eg, $h[n,k,l] = \cos(n)\cos(k)\cos(l)$), and 
+so on \cite{O:17}.
+We shall \emph{a priori} determine a maximum bandwidth, so that aliasing does not occur for our results \cite{OS:99}.
 
 As data on computers is inherently discrete, it makes sense to consider discrete-time time series data.
 Specifically, the time series data is discretized into 100 elements which correspond to evenly spaced 
@@ -136,10 +138,13 @@ so as to minimize variance.
 sets. We have chosen that 90\% of the data is dedicated to the training set, and the remaining 10\% is 
 dedicated to the test set. We found that we did not need to allocate any data to include a development set.
 
-\section{Results} For the hyperparameters specified in \S\ref{s-approach}, our neural network architecture achieves 
+\section{Results} 
+Figure~\ref{f-example_cost_vs_epoch} is a plot of the cost $\mathcal J$ versus epoch on the training 
+data for this particular problem instance and initialization.
+
+\subsection{Accuracy} For the hyperparameters specified in \S\ref{s-approach}, our neural network architecture achieves 
 an MSE of $2.46 \times 10^{-3}$ on the training data and an MSE of $6.60 \times 10^{-2}$ on the test data after 2500 
-epochs. Figure~\ref{f-example_cost_vs_epoch} is a plot of the cost $\mathcal J$ versus epoch on the training data for this particular 
-problem instance and initialization.
+epochs.
 
 \begin{figure}
 \centering
@@ -151,7 +156,8 @@ problem instance and initialization.
 Figure~\ref{f-DFT_compare} is a plot comparing the real part of the DFT of an example in the test set 
 versus its neural network estimate. The two graphs are very similar, but not completely identical; we 
 find that for the particular example in Figure~\ref{f-DFT_compare}, 
-$\|F\{f\} - \hat{F}\{f\}\|_2 / \|F\{f\}\|_2 = 6.55 \times 10^{-3}.$
+$\|F\{f\} - \hat{F}\{f\}\|_2 / \|F\{f\}\|_2 = 6.55 \times 10^{-3}$. This result suggests that this particular
+neural network architecutre for estimating the DFT of a vector is valid and can be used successfully.
 
 \begin{figure}
 \centering
@@ -159,6 +165,8 @@ $\|F\{f\} - \hat{F}\{f\}\|_2 / \|F\{f\}\|_2 = 6.55 \times 10^{-3}.$
 \caption{The real part of the DFT of an example (bottom) and the estimate from the output of the neural network.}
 \label{f-DFT_compare}
 \end{figure}
+
+\subsection{Timing}
 
 \section{Future work}
 For the field of Fourier analysis with deep learning, there exists a multitude of unanswered questions that stem from 
