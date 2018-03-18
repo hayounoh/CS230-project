@@ -24,12 +24,10 @@ Throughout a wide variety of fields, the Fourier Transform -- and namely the Dis
 is heavily used as a method of analysis of frequency components. In this paper, we show that a simple four-layer 
 neural network with linear activation functions can estimate the DFT to high accuracy. We test our neural network 
 architecture on a variety of signals, and gauge both its accuracy and its speed against the ground truth and its 
-fast, state-of-the-art implementation.
+fast, state-of-the-art implementation. We find that our neural network architecture achieves results very close 
+to that of the ground truth, and that our implementation for our problem instance is faster than both the naive 
+implementation and the state-of-the-art implementation.
 \end{abstract}
-
-\newpage
-% \tableofcontents
-% \newpage
 
 \section{Introduction}
 Throughout a wide variety of fields -- from signal processing \cite{OS:99}, to medical imaging \cite{S:00}, 
@@ -93,12 +91,12 @@ for the $i$-th example, and $\hat{F}\{f_i\} \in \reals^N$ is the DFT estimate fo
 Sometimes, in signal processing literature, this particular cost function is referred to as the 
 \emph{mean squared error} of the estimates \cite{DG:10}.
 
-\subsection{Neural network architecture} The neural network architecture is four layers of 
+\subsection{Neural network architecture} The neural network architecture is three layers of 
 fully connected layers, with 100 nodes per layer. Intuitively, as the DFT of a matrix can be described 
 as a matrix multiplication, we pick all of the layers' activation functions to be linear activation 
 functions (and indeed, linear activation functions yielded the greatest performance.) In addition to these 
 hyperparameters selected, we used a learning rate of 0.001, a minibatch size of 200, and a drop-out 
-probability of 1.0 (\ie, no nodes are removed.) We pick these values because they empirically yielded 
+probability of 0.9. We pick these values because they empirically yielded 
 the best training and test performance; that is, our architecture with these hyperparameter values 
 yielded the lowest values of the cost function $\mathcal J$ on both the training and test data.
 
@@ -134,7 +132,7 @@ The test data shall be generated in the same way that the training data is
 generated. In this way, the training data and the test data shall be drawn from the same distributions,
 so as to minimize variance.
 
-\paragraph{Data splits.} In this project, we split our $m$ examples into training, development, and test
+\paragraph{Data splits.} In this project, we split our $m=30000$ examples into training, development, and test
 sets. We have chosen that 90\% of the data is dedicated to the training set, and the remaining 10\% is 
 dedicated to the test set. We found that we did not need to allocate any data to include a development set.
 
@@ -167,6 +165,13 @@ neural network architecutre for estimating the DFT of a vector is valid and can 
 \end{figure}
 
 \subsection{Timing}
+We examine the timing performance of the naive implementation of the DFT, the FFT, and our neural network architecture
+on the data. We utilize the NumPy package in Python for these implementations \cite{NUMPY}.
+
+Over the 3000 data examples in the test set, the naive implementation of the DFT averaged a time of 5.4 $\mu$s,
+the FFT averaged a time of 3.5 $\mu$s, while our neural network implementation maintained a time of 3.4 $\mu$s, a time
+faster than both the naive implementationa and the FFT. These results show that there exists situations where the neural
+network architecture can become faster than the current state-of-the-art methods, at the cost of a small loss in accuracy.
 
 \section{Future work}
 For the field of Fourier analysis with deep learning, there exists a multitude of unanswered questions that stem from 

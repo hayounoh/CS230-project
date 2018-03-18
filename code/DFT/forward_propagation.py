@@ -34,9 +34,9 @@ def forward_propagation(X, keep_prob, parameters):
 	A2 = tf.nn.dropout(Z2, keep_prob)#tf.nn.relu(Z1)
 
 	Z3 = tf.add(tf.matmul(W3,A2), b3)
-	A3 = tf.nn.dropout(Z3, keep_prob)#tf.nn.relu(Z1)
+	# A3 = tf.nn.dropout(Z3, keep_prob)#tf.nn.relu(Z1)
 	
-	Z4 = tf.add(tf.matmul(W4,A3), b4) 
+	# Z4 = tf.add(tf.matmul(W4,A3), b4) 
 	# A4 = tf.nn.dropout(Z4, keep_prob)#tf.nn.relu(Z1)
 	
 	# Z5 = tf.add(tf.matmul(W5,A4), b5) 
@@ -44,7 +44,7 @@ def forward_propagation(X, keep_prob, parameters):
 
 	# '''...last layer'''        
 	# Z_L = tf.add(tf.matmul(W6,A5), b6)
-	return Z4
+	return Z3
 
 
 	

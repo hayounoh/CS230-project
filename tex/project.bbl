@@ -42,6 +42,11 @@ S.~Mallat.
   Way}.
 \newblock Academic Press, 3rd edition, 2008.
 
+\bibitem[Oli17]{NUMPY}
+T.~Oliphant.
+\newblock {NumPy}: Open source scientific computing for {Python}, 2017.
+\newblock [Online. \url{www.numpy.org}].
+
 \bibitem[OSB99]{OS:99}
 A.~V. Oppenheim, R.~W. Schafer, and J.~R. Buck.
 \newblock {\em Discrete-time Signal Processing}.
