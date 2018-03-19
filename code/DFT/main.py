@@ -32,7 +32,7 @@ else:
 (X_train, Y_train, X_test, Y_test, t, percent_training) = load_dataset(data)
 
 learning_rate = 0.001
-num_epochs = 1000
+num_epochs = 7500
 minibatch_size = 250
 print_cost = True
 

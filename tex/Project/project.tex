@@ -129,6 +129,11 @@ sets. We have chosen that 90\% of the data is dedicated to the training set, and
 dedicated to the test set. We found that we did not need to allocate any data to include a development set.
 
 \section{Results} 
+We examine the accuracy of our neural network architecture compared to the ground truth, as well as the 
+timing performance of the naive implementation of the DFT, the FFT, and our neural network architecture
+on the data. We utilize the Python packages, NumPy and SciPy, for the Fourier transform implementations 
+\cite{SCIPY,NUMPY}. We implement the neural network architecture with TensorFlow \cite{TENSORFLOW}.
+
 \subsection{Accuracy} 
 Figure~\ref{f-example_cost_vs_epoch} is a plot of the cost $\mathcal J$ versus epoch on the training 
 data for this particular problem instance and initialization. 
@@ -157,9 +162,6 @@ neural network architecutre for estimating the DFT of a vector is valid and can 
 \end{figure}
 
 \subsection{Timing}
-We examine the timing performance of the naive implementation of the DFT, the FFT, and our neural network architecture
-on the data. We utilize the Python package, NumPy, for these implementations \cite{NUMPY}.
-
 Over the 3000 data examples in the test set, the naive implementation of the DFT averaged a time of 5.4 $\mu$s,
 the FFT averaged a time of 3.5 $\mu$s, while our neural network implementation maintained a time of 3.4 $\mu$s, a time
 faster than both the naive implementationa and the FFT. These results show that there exists situations where the neural

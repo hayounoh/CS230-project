@@ -1,4 +1,19 @@
-\begin{thebibliography}{ANR74}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{AAB{\etalchar{+}}15}
+
+\bibitem[AAB{\etalchar{+}}15]{TENSORFLOW}
+Mart\'{\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+  Craig Citro, Greg~S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin,
+  Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard,
+  Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh
+  Levenberg, Dandelion Man\'{e}, Rajat Monga, Sherry Moore, Derek Murray, Chris
+  Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal
+  Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Vi\'{e}gas,
+  Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and
+  Xiaoqiang Zheng.
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
+  2015.
+\newblock Software available from tensorflow.org.
 
 \bibitem[ANR74]{ANR:74}
 N.~Ahmed, T.~Natarajan, and K.~R. Rao.
@@ -36,15 +51,20 @@ J.W. Goodman.
 \newblock McGraw-Hill Series in Electrical and Computer Engineering:
   Communications and Signal Processing. McGraw-Hill, 1996.
 
+\bibitem[JOP{\etalchar{+}}  ]{SCIPY}
+Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
+\newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
+\newblock [Online; \url{https://www.scipy.org}].
+
 \bibitem[Mal08]{M:08}
 S.~Mallat.
 \newblock {\em A Wavelet Tour of Signal Processing, Third Edition: The Sparse
   Way}.
 \newblock Academic Press, 3rd edition, 2008.
 
-\bibitem[Oli17]{NUMPY}
+\bibitem[Oli  ]{NUMPY}
 T.~Oliphant.
-\newblock {NumPy}: Open source scientific computing for {Python}, 2017.
+\newblock {NumPy}: Open source scientific computing for {Python}, 2006--.
 \newblock [Online. \url{www.numpy.org}].
 
 \bibitem[OSB99]{OS:99}
