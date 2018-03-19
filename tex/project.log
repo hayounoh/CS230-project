@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.9)  18 MAR 2018 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.9)  18 MAR 2018 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -269,20 +269,20 @@ Package caption Info: hyperref package is loaded.
 (./defs.tex) (./project.aux)
 \openout1 = `project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -312,7 +312,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 20.
  (/usr/local/texlive/2015basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -322,21 +322,21 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
  (./project.out) (./project.out)
 \@outlinefile=\write4
 \openout4 = `project.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -344,52 +344,52 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Non-PDF special ignored!
 
 {/usr/local/texlive/2015basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/DFT_example.png, id=80, 607.7907pt x 442.2924pt>
+<figures/DFT_example.png, id=73, 607.7907pt x 442.2924pt>
 File: figures/DFT_example.png Graphic file (type png)
 
 <use figures/DFT_example.png>
-Package pdftex.def Info: figures/DFT_example.png used on input line 73.
-(pdftex.def)             Requested size: 364.67723pt x 265.37749pt.
- [2] [3 <./figures/DFT_example.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 143.
+Package pdftex.def Info: figures/DFT_example.png used on input line 67.
+(pdftex.def)             Requested size: 303.8946pt x 221.14566pt.
+ [2 <./figures/DFT_example.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
 
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 143.
-
-<figures/final_cost_vs_epoch.png, id=106, 462.528pt x 346.896pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+ [3]
+<figures/final_cost_vs_epoch.png, id=105, 462.528pt x 346.896pt>
 File: figures/final_cost_vs_epoch.png Graphic file (type png)
 
 <use figures/final_cost_vs_epoch.png>
-Package pdftex.def Info: figures/final_cost_vs_epoch.png used on input line 149
+Package pdftex.def Info: figures/final_cost_vs_epoch.png used on input line 141
 .
-(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-<figures/DFT_comparisons.png, id=109, 462.528pt x 346.896pt>
+<figures/DFT_comparisons.png, id=108, 462.528pt x 346.896pt>
 File: figures/DFT_comparisons.png Graphic file (type png)
 
 <use figures/DFT_comparisons.png>
-Package pdftex.def Info: figures/DFT_comparisons.png used on input line 162.
-(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
- [4] [5 <./figures/final_cost_vs_epoch.png> <./figures/DFT_comparisons.png>] [6
-] (./project.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
+Package pdftex.def Info: figures/DFT_comparisons.png used on input line 154.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+ [4 <./figures/final_cost_vs_epoch.png>]
+[5 <./figures/DFT_comparisons.png>] (./project.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
  (./project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: C165716BC914356A466DE0ECCA70A859;612.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 7014 strings out of 494501
- 106167 string characters out of 6167031
- 192441 words of memory out of 5000000
+ 7013 strings out of 494501
+ 106161 string characters out of 6167031
+ 191441 words of memory out of 5000000
  10175 multiletter control sequences out of 15000+600000
  14944 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -409,10 +409,10 @@ nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015basic/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015basic/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on project.pdf (7 pages, 351440 bytes).
+Output written on project.pdf (6 pages, 349397 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
  104 words of extra memory for PDF output out of 10000 (max. 10000000)
 
