@@ -64,7 +64,7 @@ def model(X_train, Y_train, X_test, Y_test, percent_training, learning_rate = 0.
             '''Print out cost function every 50 epochs, and append cost function to vector (for use in plotting) every 5 epochs.'''
             if print_cost == True and epoch % 50 == 0:
                 print('Cost after epoch %i: %f' % (epoch, epoch_cost))
-            if print_cost == True and epoch % 5 == 0:
+            if print_cost == True and epoch % 10 == 0:
                 costs.append(epoch_cost)
         
         '''Plot the cost.'''

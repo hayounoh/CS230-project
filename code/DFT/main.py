@@ -16,7 +16,7 @@ Load Data
 X has dimensions (time indices, number of examples)
 Y has dimensions (number of examples,)
 '''
-num_examples = 60000
+num_examples = 30000
 max_bandwidth = 10
 max_num_sinusoids = 10
 
@@ -32,7 +32,7 @@ else:
 (X_train, Y_train, X_test, Y_test, t, percent_training) = load_dataset(data)
 
 learning_rate = 0.001
-num_epochs = 10000
+num_epochs = 20000
 minibatch_size = 250
 print_cost = True
 
