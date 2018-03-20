@@ -57,7 +57,7 @@ def model(X_train, Y_train, X_test, Y_test, percent_training, learning_rate = 0.
                 minibatch_X = X_train[:,i*minibatch_size:(i+1)*minibatch_size]
                 minibatch_Y = Y_train[:,i*minibatch_size:(i+1)*minibatch_size]
 
-                _, minibatch_cost = sess.run([optimizer, cost], feed_dict={X: minibatch_X, Y: minibatch_Y, keep_prob: 1})
+                _, minibatch_cost = sess.run([optimizer, cost], feed_dict={X: minibatch_X, Y: minibatch_Y, keep_prob: .9})
 
                 epoch_cost += minibatch_cost/num_minibatches
 

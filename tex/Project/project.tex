@@ -75,7 +75,6 @@ $F\{f\} = D f,$ where $D \in \complexs^{N \times N}$ is a complex matrix with va
 the $(m,n)$-index. As the DFT can be computed via a dense matrix multiplication, one can compute the DFT naively
 in $O(N^2)$ time. In addition, there exists a method to compute the DFT in $O(N \log N)$ time, the FFT. The details 
 of the FFT is beyond the scope of this project, and we refer the interested reader to \cite{CT:65}.
-
 \section{Approach} \label{s-approach}
 % The problem of determining the DFT of a bandlimited signal is a supervised learning problem, and so
 % neural networks for supervised learning problems will be used.
@@ -91,28 +90,32 @@ for the $i$-th example, and $\hat{F}\{f_i\} \in \reals^N$ is the DFT estimate fo
 In signal processing literature, this particular cost function is referred to as the 
 \emph{mean squared error} (MSE) of the estimates \cite{DG:10}.
 
-\subsection{Neural network architecture} The neural network architecture is three layers of 
-fully connected layers, with 17, nodes per (hidden) layer. Intuitively, as the DFT of a matrix can be described 
-as a matrix multiplication, we pick all of the layers' activation functions to be linear activation 
-functions (and indeed, linear activation functions yielded the greatest performance.) In addition to these 
-hyperparameters selected, we used a learning rate of 0.001, a minibatch size of 250, and a drop-out 
-probability of 0.9. We pick these values because our architecture with these hyperparameter values yielded 
-the lowest values of the cost function $\mathcal J$ on both the training and test data.
+\subsection{Neural network architecture} 
+We recognize that since the DFT is simply a matrix multiplication, it is trivial to learn the DFT matrix with
+a one-layer neural network with 100 nodes and a linear activation function. However, we specifically look to 
+learn the DFT matrix with a neural network architecture that emperically shows faster DFT computation times.
 
-\paragraph{Regularization.} Although we attempted to use various forms of regularization such as L2 and 
-L1 regularization, we found that overall, our results were better on both the training and test data 
-without any form of regularization.
+Our neural network architecture is three layers of fully connected layers, with 17, nodes per (hidden) layer. 
+Intuitively, as the DFT of a matrix can be described as a matrix multiplication, we pick all of the layers' 
+activation functions to be linear activation functions (and indeed, linear activation functions yielded the 
+greatest performance.) In addition, we used a learning rate of 0.001, a minibatch size of 250, and a drop-out 
+probability of 0.9 (other forms of regularization, such as L2 and L1 regularization, did not increase training
+accuracy.) We pick these values because our architecture with these hyperparameter values yielded the 
+lowest values of the cost function $\mathcal J$ on both the training and test data.
+
+% \paragraph{Regularization.} Although we attempted to use various forms of regularization such as L2 and 
+% L1 regularization, we found that overall, our results were better on both the training and test data 
+% without any form of regularization (other than dropout regularization.)
 
 \section{Data}
 
 In order to keep the scope of this project manageable, we shall consider only real, one-dimensional 
 signals (\eg, $f[n] = \cos(n)$), although Fourier transforms and DFTs can be extended to two-dimensional signals 
 (\eg, $g[n,k] = \cos(n)\cos(k)$) and so on \cite{O:17}. 
-We \emph{a priori} fix the maximum bandwidth to 10 Hz, 
-so that aliasing does not occur for our results \cite{OS:99}. In addition, the time series data is discretized 
-into 100 elements which correspond to evenly spaced indices $t \in [0,1]$. That is, the input signals are vectors in 
-$\reals^{100}$. For the remainder of this paper, when we refer to the DFT, we mean the real part of the 
-100-point DFT. 
+We \emph{a priori} fix the maximum bandwidth to 10 Hz, so that aliasing does not occur for our results \cite{OS:99}. 
+In addition, the time series data is discretized into 100 elements which correspond to evenly spaced indices 
+$t \in [0,1]$. That is, the input signals are vectors in $\reals^{100}$. For the remainder of this paper, when we 
+refer to the DFT, we mean the real part of the 100-point DFT. 
 
 
 \subsection{Training and test data} Discrete-time time series data is readily abundant and 
@@ -165,7 +168,7 @@ neural network architecutre for estimating the DFT of a vector is valid and can 
 Over the 3000 data examples in the test set, the naive implementation of the DFT averaged a time of 4.1 $\mu$s,
 the FFT averaged a time of 3.5 $\mu$s, while our neural network implementation maintained a time of 1.9 $\mu$s, a time
 faster than both the naive implementation and the FFT. These results show that there exists situations where the neural
-network architecture can become faster than the current state-of-the-art methods, at the cost of a small loss in accuracy.
+network architecture is faster than the current state-of-the-art methods, at the cost of a negligible loss in accuracy.
 
 \section{Future work}
 % For the field of Fourier analysis with deep learning, there exists a multitude of unanswered questions that stem from 
