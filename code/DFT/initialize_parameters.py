@@ -14,11 +14,11 @@ def initialize_parameters(len_example):
 
 	tf.set_random_seed(0)
 	    
-	W1 = tf.get_variable("W1", [len_example,len_example], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
-	b1 = tf.get_variable("b1", [len_example,1], initializer = tf.zeros_initializer())
-	W2 = tf.get_variable("W2", [len_example,len_example], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
-	b2 = tf.get_variable("b2", [len_example,1], initializer = tf.zeros_initializer())
-	W3 = tf.get_variable("W3", [len_example,len_example], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
+	W1 = tf.get_variable("W1", [int(len_example//6),len_example], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
+	b1 = tf.get_variable("b1", [int(len_example//6),1], initializer = tf.zeros_initializer())
+	W2 = tf.get_variable("W2", [int(len_example//6),int(len_example//6)], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
+	b2 = tf.get_variable("b2", [int(len_example//6),1], initializer = tf.zeros_initializer())
+	W3 = tf.get_variable("W3", [len_example,int(len_example//6)], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
 	b3 = tf.get_variable("b3", [len_example,1], initializer = tf.zeros_initializer())	
 	W4 = tf.get_variable("W4", [len_example,len_example], initializer = tf.contrib.layers.xavier_initializer(seed = 0))
 	b4 = tf.get_variable("b4", [len_example,1], initializer = tf.zeros_initializer())

@@ -28,9 +28,9 @@ def generate_signals(num_X = 10, max_bandwidth = 10, max_num_sinusoids = 100):
 
 			rand_offset = 10*np.random.randn()
 
-			sine_or_cosine = np.random.randint(2)
+			sine_or_cosine = np.random.randint(2) #1/2 chance for sine, 1/2 chance for cosine
 
-			noise_or_nonoise = np.random.randint(4) #1/4 of the signals have noise
+			noise_or_nonoise = np.random.randint(20) #1/20 of the signals have noise
 
 			if sine_or_cosine == 1:
 				signal += np.sin(2 * np.pi * rand_freq * tt)

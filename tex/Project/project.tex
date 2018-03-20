@@ -92,7 +92,7 @@ In signal processing literature, this particular cost function is referred to as
 \emph{mean squared error} (MSE) of the estimates \cite{DG:10}.
 
 \subsection{Neural network architecture} The neural network architecture is three layers of 
-fully connected layers, with 100 nodes per layer. Intuitively, as the DFT of a matrix can be described 
+fully connected layers, with 17, nodes per (hidden) layer. Intuitively, as the DFT of a matrix can be described 
 as a matrix multiplication, we pick all of the layers' activation functions to be linear activation 
 functions (and indeed, linear activation functions yielded the greatest performance.) In addition to these 
 hyperparameters selected, we used a learning rate of 0.001, a minibatch size of 250, and a drop-out 
@@ -138,8 +138,8 @@ on the data. We utilize the Python packages, NumPy and SciPy, for the Fourier tr
 Figure~\ref{f-example_cost_vs_epoch} is a plot of the cost $\mathcal J$ versus epoch on the training 
 data for this particular problem instance and initialization. 
 For the hyperparameters specified in \S\ref{s-approach}, our neural network architecture achieves an 
-MSE of $2.46 \times 10^{-3}$ on the training data and an MSE of $6.60 \times 10^{-2}$ on the test data after 
-2500 epochs.
+MSE of $8.1 \times 10^{-4}$ on the training data and an MSE of $2.1 \times 10^{-2}$ on the test data after 
+10000 epochs.
 
 \begin{figure}
 \centering
@@ -151,7 +151,7 @@ MSE of $2.46 \times 10^{-3}$ on the training data and an MSE of $6.60 \times 10^
 Figure~\ref{f-DFT_compare} is a plot comparing the real part of the DFT of an example in the test set 
 versus its neural network estimate. The two graphs are very similar, but not identical; we 
 find that for the particular example in Figure~\ref{f-DFT_compare}, 
-$\|F\{f\} - \hat{F}\{f\}\|_2 / \|F\{f\}\|_2 = 6.55 \times 10^{-3}$. This result suggests that this particular
+$\|F\{f\} - \hat{F}\{f\}\|_2 / \|F\{f\}\|_2 = 6.0 \times 10^{-4}$. This result suggests that this particular
 neural network architecutre for estimating the DFT of a vector is valid and can be used successfully.
 
 \begin{figure}
@@ -162,9 +162,9 @@ neural network architecutre for estimating the DFT of a vector is valid and can 
 \end{figure}
 
 \subsection{Timing}
-Over the 3000 data examples in the test set, the naive implementation of the DFT averaged a time of 5.4 $\mu$s,
-the FFT averaged a time of 3.5 $\mu$s, while our neural network implementation maintained a time of 3.4 $\mu$s, a time
-faster than both the naive implementationa and the FFT. These results show that there exists situations where the neural
+Over the 3000 data examples in the test set, the naive implementation of the DFT averaged a time of 4.1 $\mu$s,
+the FFT averaged a time of 3.5 $\mu$s, while our neural network implementation maintained a time of 1.9 $\mu$s, a time
+faster than both the naive implementation and the FFT. These results show that there exists situations where the neural
 network architecture can become faster than the current state-of-the-art methods, at the cost of a small loss in accuracy.
 
 \section{Future work}

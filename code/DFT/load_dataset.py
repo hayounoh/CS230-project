@@ -6,6 +6,8 @@ def load_dataset(data):
 	Given data (as a dict), load the data into training data, testing data.
 	Also output the time indices.
 	'''
+	np.random.seed(1) #maintain consistent results
+
 	X = data['X']
 	Y = data['FFT_X']
 	t = data['t']
